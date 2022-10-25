@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
+
+body {
+	background: #f1f1f1;
+	margin: 0;
+	font-family: "Poppins";
+}
+
+.pages {
+	max-width: 1400px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.workout-details span {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	background: #f1f1f1;
+	padding: 6px;
+	border-radius: 50%;
+	color: #333;
+}
+
+.gradient {
+	position: relative;
+	background: #f1f1f1;
+}
+
+.gradient:before {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+	filter: blur(20px);
+	transform: translate3d(0px, 20px, 0);
+	border-radius: inherit;
+}
+
+.gradient:after {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: inherit;
+	border-radius: inherit;
+}
+.login-gradient {
+	position: relative;
+}
+
+.login-gradient:before {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: 12%;
+	left: 4%;
+	bottom: 0;
+	right: 4%;
+	background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+	filter: blur(20px);
+	transform: translate3d(0, 15px, 0);
+	border-radius: inherit;
+}
+
+.login-gradient:after {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: 15%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: inherit;
+	border-radius: inherit;
+}
+
+.total-weight-gradient {
+	position: relative;
+}
+
+.total-weight-gradient:before {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: 0%;
+	left: 0%;
+	bottom: 0;
+	right: 0%;
+	background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+	filter: blur(20px);
+	transform: translate3d(0, 15px, 0);
+	border-radius: inherit;
+}
+
+.total-weight-gradient:after {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: 15%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: inherit;
+	border-radius: inherit;
+}
+
+@media only screen and (min-width: 800px) {
+	.total-weight-gradient:before,
+	.total-weight-gradient:after {
+		left: 10%;
+		right: 10%;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	.total-weight-gradient:before,
+	.total-weight-gradient:after {
+		left: 15%;
+		right: 15%;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.total-weight-gradient:before,
+	.total-weight-gradient:after {
+		left: 20%;
+		right: 20%;
+	}
+}
+@media only screen and (min-width: 1400px) {
+	.total-weight-gradient:before,
+	.total-weight-gradient:after {
+		left: 25%;
+		right: 25%;
+	}
+}
+@media only screen and (min-width: 1600px) {
+	.total-weight-gradient:before,
+	.total-weight-gradient:after {
+		left: 30%;
+		right: 30%;
+	}
+}
+@media only screen and (min-width: 1800px) {
+	.total-weight-gradient:before,
+	.total-weight-gradient:after {
+		left: 35%;
+		right: 35%;
+	}
+}
+@media only screen and (min-width: 2000px) {
+	.total-weight-gradient:before,
+	.total-weight-gradient:after {
+		left: 40%;
+		right: 40%;
+	}
+}
+
+/*=============== Sidebar Animation =============== */
+.sidebar-links li {
+	opacity: 0;
+	animation: slideRight 0.5s ease-in-out 0.3s forwards;
+}
+.sidebar-links li:nth-of-type(1) {
+	animation-delay: 0.25s;
+}
+.sidebar-links li:nth-of-type(2) {
+	animation-delay: 0.5s;
+}
+.sidebar-links li:nth-of-type(3) {
+	animation-delay: 0.75s;
+}
+.sidebar-links li:nth-of-type(4) {
+	animation-delay: 1s;
+}
+.sidebar-links li:nth-of-type(5) {
+	animation-delay: 1.25s;
+}
+@keyframes slideRight {
+	0% {
+		transform: translateX(-200px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
