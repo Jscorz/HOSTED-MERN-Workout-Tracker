@@ -11,7 +11,7 @@ export const useChangeUserPicture = () => {
 		setIsLoading(true);
 		setError(null);
 
-		const response = await fetch("/api/user/userpicture", {
+		const response = await fetch("https://reps-logger-api.onrender.com/api/user/userpicture", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
