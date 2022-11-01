@@ -65,14 +65,17 @@ const WorkoutDetails = ({ workout, reFetchWorkouts }) => {
 			return;
 		}
 
-		const response = await fetch("/api/workouts/" + workout._id, {
-			method: "PATCH",
-			headers: {
-				"Content-Type": "application/json",
-				Authorization: `Bearer ${user.token}`,
-			},
-			body: JSON.stringify({ title, load, reps }),
-		});
+		const response = await fetch(
+			"https://reps-logger-api.onrender.com/api/workouts/" + workout._id,
+			{
+				method: "PATCH",
+				headers: {
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${user.token}`,
+				},
+				body: JSON.stringify({ title, load, reps }),
+			}
+		);
 		const json = await response.json();
 
 		if (!response.ok) {
